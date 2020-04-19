@@ -1,16 +1,26 @@
 {
-    "name": "@ku3mich/yt-scrapper",
-    "version": "1.0.0",
+    "name": "yt-scrapper",
+    "version": "1.0.1",
     "description": "youtube scrapper",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "keywords": [],
-    "bin": {
-        "yd": "cli.js"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ku3mich/yt-scrapper"
     },
-    "author": "",
+    "keywords": [
+        "youtube",
+        "mp3",
+        "download",
+        "playlist",
+        "channel"
+    ],
+    "bin": {
+        "yts": "cli.js"
+    },
+    "author": "Serhii Kuzmychov",
     "license": "MIT",
     "dependencies": {
         "cheerio": "^1.0.0-rc.3",
