@@ -39,7 +39,7 @@ program
         const downloadPlaylist = async (id, base) => {
             var l = await scrapPlaylist(id);
             const dir = sanitize(l.title || "");
-            const p = path.join(base, dir);
+            const p = path.join(base || "", dir);
             
             if (!fs.existsSync(p)) {
                 fs.mkdirSync(p);
