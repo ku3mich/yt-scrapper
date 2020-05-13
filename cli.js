@@ -47,7 +47,11 @@ program
 
             l.videos.forEach((t) => {
                 const o = path.relative(cmdObj.output, p);
-                YD.download(t.id, path.join(o, `${sanitize(t.title)}.mp3`));
+		//console.log(o, o.id);
+		const fn = path.join(o, `${sanitize(t.title)}.mp3`);
+		if (!fs.existsSync(fn)) {
+                	YD.download(t.id, fn);
+		}
             });
         };
 

@@ -36,13 +36,16 @@ const parsePlaylistHtml = (html, id) => {
     const q = $("a.pl-video-title-link")
         .map((i, t) => {
             const a = $(t);
+//		console.log(a.prop("href"), extract(a.prop("href"), "v"));
             return {
                 id: extract(a.prop("href"), "v"),
                 title: a.text().trim(),
             };
         })
-        .get();
+        .get()
+	.filter(s=>s.id && s.title)
 
+//                        console.log(q);
     return {
         id,
         title: $('meta[itemprop="name"]').prop("content"),
